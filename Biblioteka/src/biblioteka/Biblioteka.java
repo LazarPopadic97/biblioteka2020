@@ -1,10 +1,16 @@
 package biblioteka;
 
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import biblioteka.interfejs.BibliotekaInterfejs;
+
 
 /**
  * Klasa predstavlja biblioteku sa knjigama. Knjige se cuvaju u
@@ -97,16 +103,32 @@ public class Biblioteka implements BibliotekaInterfejs {
 		
 		return rezultat;
 	}
-
+	
+	
 	@Override
 	public void prebaciUJson(String fajl) {
-		// TODO Auto-generated method stub
+		try(FileWriter out=new FileWriter(fajl)){
+			Gson gson=new GsonBuilder().setPrettyPrinting().create();
+			gson.toJson(knjige,out);
+		}catch(IOException e ) {
+			e.printStackTrace();
+		}
+		
 		
 	}
 
 	@Override
 	public void prebaciIzJsona(String fajl) {
-		// TODO Auto-generated method stub
+		knjige.clear();
+		try(FileReader in = new FileReader(fajl)){
+			Gson gson = new Gson();
+			Knjiga [] nizKnjiga=gson.fromJson(in, Knjiga[].class);
+			knjige=Arrays.asList(nizKnjiga);
+			
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+		
 		
 	}
 
