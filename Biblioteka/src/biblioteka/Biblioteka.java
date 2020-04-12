@@ -98,4 +98,16 @@ public class Biblioteka implements BibliotekaInterfejs {
 		return rezultat;
 	}
 
+	@Override
+	public void prebaciUJson(String fajl) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void prebaciIzJsona(String fajl) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
