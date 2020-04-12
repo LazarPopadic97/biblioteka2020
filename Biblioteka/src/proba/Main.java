@@ -33,11 +33,11 @@ public class Main {
 		autor21.setPrezime("Selimovic");
 		LinkedList<Autor> autori2=new LinkedList<Autor>();
 		autori2.add(autor21);
-		knjiga1.setAutori(autori2);
-		knjiga1.setIsbn("00000002");
-		knjiga1.setIzdanje(2002);
-		knjiga1.setIzdavac("Delfi");
-		knjiga1.setNaslov("Tvrdjava");
+		knjiga2.setAutori(autori2);
+		knjiga2.setIsbn("00000002");
+		knjiga2.setIzdanje(2002);
+		knjiga2.setIzdavac("Delfi");
+		knjiga2.setNaslov("Tvrdjava");
 		
 		Biblioteka b=new Biblioteka();
 		b.dodajKnjigu(knjiga1);

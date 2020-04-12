@@ -1,5 +1,21 @@
 [
   {
+    "naslov": "Matematika",
+    "isbn": "00000001",
+    "autori": [
+      {
+        "ime": "Predrag",
+        "prezime": "Brkic"
+      },
+      {
+        "ime": "Maja",
+        "prezime": "Karlo"
+      }
+    ],
+    "izdavac": "Vulkan",
+    "izdanje": 2003
+  },
+  {
     "naslov": "Tvrdjava",
     "isbn": "00000002",
     "autori": [
@@ -10,8 +26,5 @@
     ],
     "izdavac": "Delfi",
     "izdanje": 2002
-  },
-  {
-    "izdanje": 0
   }
 ]
