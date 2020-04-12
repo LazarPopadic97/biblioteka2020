@@ -1,0 +1,17 @@
+[
+  {
+    "naslov": "Tvrdjava",
+    "isbn": "00000002",
+    "autori": [
+      {
+        "ime": "Mesa",
+        "prezime": "Selimovic"
+      }
+    ],
+    "izdavac": "Delfi",
+    "izdanje": 2002
+  },
+  {
+    "izdanje": 0
+  }
+]

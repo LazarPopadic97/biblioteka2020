@@ -12,6 +12,7 @@ import com.google.gson.GsonBuilder;
 import biblioteka.interfejs.BibliotekaInterfejs;
 
 
+
 /**
  * Klasa predstavlja biblioteku sa knjigama. Knjige se cuvaju u
  * listi. Klasa implementira interfejs BibliotekaInterfejs.
@@ -124,7 +125,9 @@ public class Biblioteka implements BibliotekaInterfejs {
 			Gson gson = new Gson();
 			Knjiga [] nizKnjiga=gson.fromJson(in, Knjiga[].class);
 			knjige=Arrays.asList(nizKnjiga);
-			
+			for(Knjiga k: knjige) {
+				System.out.println(k);
+			}
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
